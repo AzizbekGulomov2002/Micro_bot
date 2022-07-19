@@ -1,0 +1,100 @@
+0)  virtual muhit
+
+python -m venv env
+
+cd env
+
+cd Scripts
+
+activate
+
+(githubda yangi loyiha ochib yuklash)
+_________________________________________________________________________________________
+
+1) bot.py :
+
+
+import  logging
+
+from aiogram import Bot, Dispatcher, executor, types
+
+API_TOKEN = '5349861492:AAGekXtXjqudSG1QRNrVIEEGTx-K60xn-ao'
+
+logging.basicConfig(level=logging.INFO)
+
+bot = Bot(token=API_TOKEN)
+dp = Dispatcher(bot)
+
+@dp.message_handler(commands=['start', 'help']) 
+async def send_welcome(mesage:types.Message):
+    await mesage.reply("Assalomu alaykum hurmatli foydalanuvchi")
+    
+    
+@dp.message_handler()
+async def echo(message:types.Message):
+    await message.answer(message.text)
+    
+if __name__=='__main__':
+    executor.start_polling(dp, skip_updates=True)
+
+_________________________________________________________________________________________
+
+
+2) yangi Procfile(text) ko'rinishida ochish:
+
+
+worker python bot.py
+
+
+_________________________________________________________________________________________
+
+
+3) Yangi requirements.txt fayl ochish
+
+
+
+4) Yangi .gitignore fayl ochish:
+
+.idea/
+env/
+
+_________________________________________________________________________________________
+
+5) .env fayl ochish
+
+
+6) terminal:
+
+pip install environs==9.5.0
+
+
+_________________________________________________________________________________________
+
+7) terminal cmd:
+
+pip install -U aiogram
+
+pip freeze
+
+git init
+
+git add -A
+
+git commit -m 'Aziz'	
+
+
+heroku login (login:azizgulomov1529@gail.com)(parol:@Azizbek1py)
+
+(google ga terib aktiv qilinadi)
+
+heroku create (loyiha nomi) [https://direktormurojaatbot.herokuapp.com/]
+
+git:remote -a (loyiha nomi) 
+
+
+git push heroku master
+
+
+_________________________________________________________________________________________
+
+8) __init__.py fayl ochish
